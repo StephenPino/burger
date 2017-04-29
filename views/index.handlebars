@@ -5,7 +5,7 @@
         </div>
     </div>
     <div class="row body">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <h2>Burgers on The Menu</h2>
 
             <ul>
@@ -15,33 +15,15 @@
 
                     <form action="/{{this.id}}?_method=PUT" method="POST">
                         <input type="hidden" name="devoured" value="true">
-                        <button type="submit">DEVOUR THE BURGER</button>
+                        <button class="btn-success" type="submit">DEVOUR THE BURGER</button>
                     </form>
 
                 </li>
                 {{/unless}} {{/each}}
             </ul>
         </div>
-        <div class="col-md-6">
-            <h2>Devoured Burgers</h2>
 
-            <ul>
-                {{#each burgers}} {{#if this.devoured}}
-                <li>
-                    {{this.burger_name}}
-
-                    <form action="/{{this.id}}?_method=PUT" method="POST">
-                        <input type="hidden" name="devoured" value="false">
-                        <button type="submit">REGURGITATE BURGER <UP!></UP!></button>
-                    </form>
-                </li>
-                {{/if}} {{/each}}
-            </ul>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12 add">
+        <div class="col-md-4 add">
             <h2>Add a Buger</h2>
             <form class="create-update-form" action="/" method="POST">
 
@@ -52,6 +34,23 @@
 
                 <button type="submit">Add Burger</button>
             </form>
+        </div>
+
+        <div class="col-md-4">
+            <h2>Devoured Burgers</h2>
+
+            <ul>
+                {{#each burgers}} {{#if this.devoured}}
+                <li>
+                    {{this.burger_name}}
+
+                    <form action="/{{this.id}}?_method=PUT" method="POST">
+                        <input type="hidden" name="devoured" value="false">
+                        <button class="btn-danger" type="submit">REGURGITATE BURGER <UP!></UP!></button>
+                    </form>
+                </li>
+                {{/if}} {{/each}}
+            </ul>
         </div>
     </div>
 

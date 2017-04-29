@@ -11,7 +11,8 @@
 .body {
     height: 50%;
     width: 100%;
-    background-color: #D5E3F27
+    background-color: #D5E3F2;
+    vertical-align: middle;
 }
 
 .add {
@@ -23,13 +24,16 @@ html {
   position: relative;
   min-height: 100%;
 }
+
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
   background-color: #D5E3F2;
 }
+
 .footer {
   position: absolute;
+  padding-top: 20px;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
@@ -38,5 +42,5 @@ body {
 }
 
 .footer-text {
-    color: #fff
+    color: #fff;
 }
